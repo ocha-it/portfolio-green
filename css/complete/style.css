@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+/* 全体 */
+body {
+  font-family:"Avenir",sans-serif;
+  color:#4D4C4C;
+  text-align: center;
+  margin:0;
+}
+
+h1,h2{
+    font-size:3rem;
+    font-weight: normal;
+}
+
+a{
+    color:#fff;
+    text-decoration: none;
+}
+
+header {
+    width:100%;
+    background: linear-gradient(#75BDD3, #55C4BB);
+    display:inline-block; /*firstviewのmargin分まで背景を引き延ばすためにあとで入れる*/
+}
+
+nav ul{
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin:12px 17px;
+    list-style: none;
+}
+
+nav ul li a::after {
+	content: '';
+	display: block;
+	transform: translate(15%); /* 位置調整 */
+	width: 70%; /* 下線の幅 */
+	height: 3px; /* 下線の太さ */
+	background-color: #6AEDC8; /* 下線の色 */
+}
+
+.firstview {
+    display: flex;
+    width : 66%;
+    margin: 100px 17%;
+}
+
+.firstview-img {
+    width:40%;
+}
+
+.firstview-img img {
+    width:88%;
+    border:2px solid #FFFFFF;
+    border-radius: 50%;
+    padding :5%;
+}
+
+.firstview-txt {
+    width:60%;
+    margin:auto;
+    color : #FFFFFF;
+}
+
+.firstview-txt h1{
+    display: inline-block;
+    border-bottom: 3px solid #6AEDC8;
+}
+
+.section-img{
+    width:22%;
+    margin-bottom:50px;
+}
+
+.about-txt {
+    width:56%;
+    margin:20px auto;
+}
+
+.about-icons img{
+    width:32px;
+    margin:2%;
+}
+
+#projects {
+    -webkit-clip-path: polygon(0 5%, 200% -5%,200% 105%, 0 95%);
+    clip-path: polygon(0 5%, 200% -5%,200% 105%, 0 95%);/*検証ツールで確認*/
+    background-color:#53BD9D;
+    color:#FFFFFF;
+    padding: 60px 0 0 0;
+  }
+
+.project-cards {
+    display:flex;
+    width:77%;
+    justify-content: space-between;
+    margin:auto;
+}
+
+.project-card {
+    width:33%;
+    text-align: left;
+}
+
+.project-card img{
+    width:100%;
+}
+
+.project-links {
+    display: flex;
+}
+.project-link {
+    padding:5px;
+    margin:5px;
+    border:1px solid #fff;
+}
+
+.contact-cards {
+    display:flex;
+    width:77%;
+    justify-content: space-between;
+    margin:auto;
+}
+
+.contact-card {
+    width:33%;
+    background-color: #F5F4F4;
+    border-top: 10px solid #53BD9D;
+}
+
+.contact-card img{
+    width:14%;
+    margin-top:30px;
+}
+
+.contact-card h3::after{
+    content: '';
+	display: block;
+	transform: translate(170%,300%); /* 位置調整 */
+	width: 23%; /* 下線の幅 */
+	height: 5px; /* 下線の太さ */
+	background-color: #707070; /* 下線の色 */
+}
+
+.contact-card p{
+    margin-top:30px;
+}
+
+footer {
+    margin-top:300px;
+    padding:30px;
+    background-color: #F5F4F4;
+    font-size:small;
+}
+
+@media screen and (max-width : 767px){
+    .firstview {
+        display: block;
+        width : 80%;
+        margin:100px auto;
+    }
+
+    .firstview-img {
+        width:100%;
+    }
+    .firstview-img img {
+        width:88%;
+        padding :5%;
+        border:2px solid #FFFFFF;
+        border-radius: 50%;
+    }
+
+    .firstview-txt {
+        width: 100%;
+    }
+    h1,h2{
+        font-size:40px;
+    }
+
+    .about-txt {
+        width:62%;
+    }
+
+    .project-cards {
+        display:block;
+    }
+
+    .project-card {
+        width:100%;
+    }
+
+    .project-links {
+        text-align: center;
+        justify-content: center;
+        margin-bottom:70px;
+    }
+    
+    .contact-cards {
+        display:block;
+    }
+    
+    .contact-card {
+        width:100%;
+        margin-bottom:75px;
+        padding-bottom: 35px;
+    }
+    
+    footer {
+        margin-top:30px;
+        padding:10px;
+    }
+}
